@@ -1,0 +1,97 @@
+{%extends 'index.html'%}
+{%load static%}
+{%block body%}
+    {% comment %} joius {% endcomment %}
+    <section id="join-us" class="contact">
+      
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Join</h2>
+          <p>Join Us</p>
+        </div>
+
+       <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+         <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>26D, PKT B8 Mayur Vihar 3, New Delhi, DL 110096</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>Support@renewpolicy.co.in</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 888-22-054-97</p>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+            <form method="post">  
+              {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="text" class="form-control" name="contact" id="email" placeholder="Your Contact" data-rule="email" data-msg="Please enter a valid email" />
+                        <div class="validate"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-12 form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                      <div class="validate"></div>
+                  </div>
+              </div>
+                <div class="form-row">
+                  <div class="col-md-6 form-group">
+                    <label for="pan">PAN Card Upload:</label>
+                    <input type="file" class="form-control" name="pan" id="pan" accept=".jpg, .jpeg, .png, .pdf" />
+                  </div>
+        
+                  <div class="col-md-6 form-group">
+                    <label for="aadhar">Aadhar Card Upload:</label>
+                    <input type="file" class="form-control" name="aadhar" id="aadhar" accept=".jpg, .jpeg, .png, .pdf" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 form-group">
+                    <label for="photo">Photo Upload:</label>
+                    <input type="file" class="form-control" name="photo" id="photo" accept=".jpg, .jpeg, .png" />
+                  </div>
+        
+                  <div class="col-md-6 form-group">
+                    <label for="certificate">Certificate Upload:</label>
+                    <input type="file" class="form-control" name="certificate" id="certificate" accept=".pdf" />
+                </div>
+                </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+        </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+    {% comment %} joius {% endcomment %}
+
+    <!-- ======= Contact Section ======= -->
+   
+
+  </main><!-- End #main -->
+  {% endblock %}
+
+  <!-- ======= Footer ======= -->
+ 
